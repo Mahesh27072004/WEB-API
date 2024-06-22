@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+ background: linear-gradient(160deg,rgb(7, 69, 93) 0%,rgb(56, 94, 124) 100%);
+  
+ 
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+    justify-content: center;
+}
+.container h1{
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: white;
+   
+    font-weight: 800;
+}
+
+.tab-container{
+    display: flex;
+    gap: 19rem;
+    margin-left: 1rem;
+     margin-top: 3rem;
+     margin-bottom: 1.5rem
+}
+
+
+
+.tab{
+    cursor: pointer;
+    padding: 4px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+.tab.current-tab{
+    background-color:rgba(155, 161, 170, 0.5);
+    border-radius: 4px;
+}
+
+.Weather-container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: 4rem;
+}
+.grant-location-container{
+   
+   display: none;
+    
+}
+.grant-location-container.active{
+   display: flex;
+   justify-content: center;
+   color: white;
+   align-items: center;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+.grant-location-container button{
+    all: unset;
+    font-size:0.85rem ;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin-top: 2rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(155, 161, 170, 0.5);
+}
+.form-container{
+    display: none;
+}
+.form-container.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+ 
+
+}
+.form-container input{
+   
+  padding: 0.35rem;
+  padding-left: 1rem;
+    width: 30vw;
+    height: 30px;
+    color: white;
+    outline: 1px white;
+    border: none;
+    background-color: rgba(155, 161, 170, 0.5);
+    border-radius: 8px;
+    border-color: rgba(155, 161, 170, 0.5);
+}
+.form-container input::placeholder{
+    color: white;
+}
+.form-container input:focus{
+    outline: 3px solid white;
+}
+.form-container button{
+    all: unset;
+   width: 30px;
+   height: 30px;
+   background-color: rgba(155, 161, 170, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+}
+.loading-container{
+    position: absolute;
+    top: 50%;
+    display:none;
+}
+.loading-container.active{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+.user-info-container{
+    position: absolute;
+    margin-top: 5rem;
+    display: none;
+    
+}
+.user-info-container.active{
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1s;
+}
+.user-info-container p[data-temp]{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2rem;
+}
+.user-info-container p[data-weatherDesc]{
+    color: white;
+    margin-top: 0.35rem;
+    font-size: larger;
+}
+.user-info-container img{
+    width: 5rem;
+}
+.name{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.name  img{
+    width: 20px;
+}
+.card{
+    width: 10rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+    font-size: larger;
+    align-items: center;
+    color: white;
+    background-color:rgba(150, 154, 159, 0.5);
+  
+}
+.card img{
+    height: 50px;
+    width: 50px;
+}
+
+@media (max-width:1000px){
+  
+   .wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+   }
+   .tab-container{
+    gap: 5rem;
+    margin-left: -0.2rem;
+    margin-bottom: 2rem;
+   
+   }
+   .tab{
+    font-size: 1rem;
+   }
+   .user-info-container{
+    margin-top: 5rem;
+   }
+   .form-container input{
+    padding: 0.35rem;
+    padding-left: 1rem;
+    width: 15rem;
+   
+}
+   .card-container{
+    width: 60vw;
+    gap: 1rem;
+
+   }
+   .card{
+    width: 20rem;
+    font-size: small;
+    height: 6rem;
+    padding: 1rem;
+   }
+    
+    
+}
